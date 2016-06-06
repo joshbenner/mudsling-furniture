@@ -5,11 +5,15 @@ import mudsling.errors
 import mudsling.messages
 import mudsling.parsers
 import mudsling.objects
-from mudsling.utils.hooks import hook
 import mudsling.extensibility
+
+from mudsling.utils.hooks import hook
+from mudsling.utils.migrate import rename_module
 
 import mudslingcore.objects
 import mudslingcore.senses as senses
+
+rename_module('furniture', 'mudsling_furniture')
 
 isa_occupant = mudsling.locks.Lock('isa(furniture.FurnitureOccupant)')
 
