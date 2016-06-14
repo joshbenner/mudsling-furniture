@@ -15,7 +15,7 @@ import mudslingcore.senses as senses
 
 rename_module('furniture', 'mudsling_furniture')
 
-isa_occupant = mudsling.locks.Lock('isa(furniture.FurnitureOccupant)')
+isa_occupant = mudsling.locks.Lock('isa(mudsling_furniture.FurnitureOccupant)')
 
 
 class FurniturePlugin(mudsling.extensibility.GamePlugin):
